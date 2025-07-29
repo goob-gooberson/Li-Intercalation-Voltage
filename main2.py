@@ -1,8 +1,40 @@
 from pymatgen.ext.matproj import MPRester
 from pymatgen.core import Composition
-import os
 
-API_KEY = os.getenv("MP_API_KEY")
+# --- Begin universal API key loader (local file → env → .env) ---
+API_KEY = None
+
+# 1) Try a private local file next to this script (never committed)
+try:
+    from local_settings import MP_API_KEY as API_KEY  # user's private key lives here
+except Exception:
+    API_KEY = None
+
+# 2) If not found, try an environment variable (Codespaces/Actions/OS/IDE)
+if not API_KEY:
+    import os
+    API_KEY = os.getenv("MP_API_KEY")
+
+# 3) If still not found, load from a .env file (does NOT override real env vars)
+if not API_KEY:
+    try:
+        from dotenv import load_dotenv, find_dotenv  # requires: python-dotenv
+        load_dotenv(find_dotenv(), override=False)   # <- per your request
+        import os
+        API_KEY = os.getenv("MP_API_KEY")
+    except Exception:
+        API_KEY = None  # dotenv not installed or no .env found; keep going
+
+# 4) Friendly error if nothing was provided
+if not API_KEY:
+    raise RuntimeError(
+        "No Materials Project API key found. "
+        "Provide it via ONE of the following:\n"
+        "  (a) local_settings.py with MP_API_KEY = '...'\n"
+        "  (b) environment variable MP_API_KEY (works in Codespaces/Actions/OS/IDE)\n"
+        "  (c) a .env file with MP_API_KEY=... (requires python-dotenv)"
+    )
+# --- End universal API key loader ---
 
 
 def get_lowest_entry_for_formula(mpr, formula):
