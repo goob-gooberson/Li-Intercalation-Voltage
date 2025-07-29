@@ -1,7 +1,8 @@
 from pymatgen.ext.matproj import MPRester
 from pymatgen.core import Composition
+import os
 
-API_KEY = "omskIUGlqsV2cSTZxrB5jSG2p76VYM4e"
+API_KEY = os.getenv("MP_API_KEY")
 
 
 def get_lowest_entry_for_formula(mpr, formula):
