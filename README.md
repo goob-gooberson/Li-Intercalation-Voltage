@@ -25,7 +25,7 @@ Python scripts and utilities for Li intercalation voltage estimation from DFT da
 
 1. General thermodynamic formula
 The open‑circuit voltage **V** is related to the Gibbs free energy change **ΔG**:
-V = - ΔG / (nF)
+- V = - ΔG / (nF)
 
 - **ΔG** = change in Gibbs free energy of the reaction (J/mol)  
 - **n** = number of electrons (or Li⁺) transferred  
@@ -44,9 +44,10 @@ So, V ≈ - ΔE / (nF)
 If **ΔE** is in **eV per Li atom**, the Faraday constant cancels out:
 
 V (V) ≈ - ΔE (eV)
+
 V = - [ E(Li–Cathode) - E(Cathode) - E(Li) ]
 
-
+---
 
 
 ## Set up your Materials Project API key
