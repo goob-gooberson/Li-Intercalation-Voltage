@@ -97,6 +97,7 @@ You can keep your Materials Project API key in a `.env` file. The project will r
 ---
 
 ## Implementation with PyMatGen
+
 This script estimates an average intercalation voltage for a simple “cathode ↔ anode” reaction using formation energies from the [Materials Project] via pymatgen.
 
 What the script does:
@@ -110,6 +111,31 @@ What the script does:
 
 ---
 
+Core functions
 
+1. `get_lowest_entry_for_formula(mpr, formula)`
+- Queries Materials Project for all entries matching a chemical formula and returns the one with lowest energy per atom (a simple proxy for stability).
+2. `get_energy_per_fu(entry)`
+- Converts entry.energy_per_atom (eV/atom) to eV per reduced formula unit (FU) by multiplying by entry.composition.reduced_composition.num_atoms.
+3. `calculate_voltage(cathode_formula, anode_formula)`
+- Builds the lithiated cathode formula as "Li" + cathode_formula.
+- Fetches lowest-energy entries for: cathode, lithiated cathode, and anode.
+- Computes the Voltage
+- Reports the reaction string and estimated voltage
 
+---
+
+## Troubleshooting
+
+1. “No entries found for …”
+- Check the formula spelling and capitalisation (LiFePO4, not lifePO4). Try a simpler or reduced formula.
+2. API errors
+- Ensure MP_API_KEY is valid and your network allows HTTPS.
+3. Unexpected voltages
+- The script only considers the lowest energy formations, which may not be the ones participating in the reactions.
+- Sometimes there are multiple or old entries in the MP library.
+
+--- 
+
+## 
 
