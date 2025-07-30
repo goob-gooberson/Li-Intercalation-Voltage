@@ -9,9 +9,7 @@ Python scripts and utilities for Li intercalation voltage estimation from DFT da
 - [Implementation with PyMatGen](#implementation-with-pymatgen)
 - [Installation](#installation)
 - [Set up your Materials Project API key](#set-up-your-materials-project-api-key)
-- [Quick start](#quick-start)
 - [Examples](#examples)
-- [Input data formats](#input-data-formats)
 - [Assumptions & caveats](#assumptions--caveats)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
@@ -261,6 +259,97 @@ Key packages:
 You must provide your MP API key before running. See [Set up your Materials Project API key](#set-up-your-materials-project-api-key):
 
 ### 4) Run the script
+
+---
+
+## Examples
+
+### 1) Lithium metal anode
+Interactive run:
+Enter cathode formula: FePO4
+Enter anode formula: Li
+
+Reaction: FePO4 + Li → LiFePO4
+Estimated Voltage: 3.420 V
+
+### 2) Graphite anode (lithiated anode → delithiated product)
+Enter cathode formula: FePO4
+Enter anode formula: LiC6
+
+Reaction: FePO4 + LiC6 → LiFePO4 + C6
+Estimated Voltage: 3.410 V
+
+### 3) Silicon anode (lithiated → delithiated)
+Enter cathode formula: TiS2
+Enter anode formula: LiSi
+
+Reaction: TiS2 + LiSi → LiTiS2 + Si
+Estimated Voltage: 2.220 V
+
+### 4) Another cathode example
+Enter cathode formula: CoO2
+Enter anode formula: Li
+
+Reaction: CoO2 + Li → LiCoO2
+Estimated Voltage: 3.900 V
+
+---
+
+Examples (multi‑composition voltage, `calculate_voltage_for_metal_anion`)
+
+The script prompts you for:
+- **metal** (e.g., `Co`, `Ni`, `Mn`)
+- **anion** (e.g., `O`, `S`, `Se`)
+- **x2** = higher Li content (final composition on the right)
+- **x1** = lower Li content (initial composition on the left)
+
+It evaluates the reaction:
+Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
+
+### 1) Classic layered oxide (Co/O): from `x1 = 0` to `x2 = 1`
+Enter the metal symbol (e.g., Co, Ni, Mn): Co
+Enter the anion symbol (e.g., O, S, Se): O
+Enter the starting Li content (x2): 1
+Enter the final Li content (x1): 0
+
+CoO2 + 1.0Li -> LiCoO2
+Estimated Voltage: 3.900 V
+
+### 2) Half‑lithiated step (Co/O): from `x1 = 0` to `x2 = 0.5`
+Enter the metal symbol (e.g., Co, Ni, Mn): Co
+Enter the anion symbol (e.g., O, S, Se): O
+Enter the starting Li content (x2): 0.5
+Enter the final Li content (x1): 0
+
+CoO2 + 0.5Li -> Li0.5CoO2
+Estimated Voltage: 3.650 V
+
+### 3) Nickel oxide (Ni/O): from `x1 = 0.5` to `x2 = 1.0
+Enter the metal symbol (e.g., Co, Ni, Mn): Ni
+Enter the anion symbol (e.g., O, S, Se): O
+Enter the starting Li content (x2): 1
+Enter the final Li content (x1): 0.5
+
+Li0.5NiO2 + 0.5Li -> LiNiO2
+Estimated Voltage: 3.700 V
+
+### 4) Sulfide example (Mn/S): from `x1 = 0` to `x2 = 1`
+Enter the metal symbol (e.g., Co, Ni, Mn): Mn
+Enter the anion symbol (e.g., O, S, Se): S
+Enter the starting Li content (x2): 1
+Enter the final Li content (x1): 0
+
+MnS2 + 1.0Li -> LiMnS2
+Estimated Voltage: 2.400 V
+
+---
+
+### Notes
+
+- The code uses Materials Project entries within the chemical system `{Li, M, X}` and a tolerance
+  around your target `x` to estimate energies when exact `Li{x}MX2` formulas are not directly available.
+- Bulk Li reference is taken from Materials Project ID `mp-1018134`.
+- If any required entry is missing, the script will print a message and skip the calculation.
 
 ---
 
