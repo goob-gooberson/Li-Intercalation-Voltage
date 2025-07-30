@@ -19,7 +19,45 @@ Python scripts and utilities for Li intercalation voltage estimation from DFT da
 
 ---
 
-## Background theory
+## Background Theory
+
+Lithium intercalation compounds, especially lithium-metal oxides and dichalcogenides, are key materials for rechargeable lithium-ion batteries. These compounds allow **reversible insertion and removal of Li⁺ ions** without significant structural changes, a process called **topotactic intercalation**.
+
+- **Electrochemical Cell:**  
+  A lithium-ion cell consists of a **cathode** and **anode** separated by an electrolyte that allows Li⁺ transport. The open-circuit voltage (OCV) of the cell is determined by the difference in **Li chemical potential** between the electrodes:
+
+V = (μ_Li^cathode - μ_Li^anode) / zF
+
+where:
+- μ_Li = chemical potential of lithium  
+- z = number of electrons transferred (z = 1 for Li)  
+- F = Faraday constant  
+
+- **Intercalation Voltage:**  
+The average voltage for lithium insertion/removal is directly related to the change in **Gibbs free energy**:
+
+V = -ΔG / (nF)
+
+In ab initio studies, ΔG is approximated by the total energy difference (ΔE) between the **lithiated** and **delithiated** phases:
+
+V ≈ - (E_LiMO2 - E_MO2 - E_Li) / nF
+
+This requires three total energies:
+1. **LiMO2:** Lithiated cathode
+2. **MO2:** Delithiated cathode (Li removed)
+3. **Li:** Metallic lithium (reference)
+
+- **Charge Transfer:**  
+Li is typically fully ionized (Li⁺) upon intercalation, transferring its electron to the transition metal and the anion framework. The **anion charge transfer** strongly influences the intercalation voltage:
+- Oxides (O²⁻) generally have **higher voltages** than sulfides (S²⁻) or selenides (Se²⁻).
+
+- **Structural Effects:**  
+While the metal chemistry and anion type largely determine the voltage, the **crystal structure** can influence ionic relaxation and band structure changes upon intercalation.
+
+**Key Insight:**  
+Ab initio pseudopotential methods, combined with thermodynamics, enable prediction of average intercalation voltages **without experimental data**, allowing screening of new electrode materials for improved energy density.
+
+---
 
 ## Formulae
 
