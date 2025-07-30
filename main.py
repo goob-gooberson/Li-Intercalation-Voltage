@@ -171,7 +171,7 @@ def calculate_voltage_for_metal_anion(metal, anion, x2, x1):
 if __name__ == "__main__":
     metal = input("Enter the metal symbol (e.g., Co, Ni, Mn): ").strip()
     anion = input("Enter the anion symbol (e.g., O, S, Se): ").strip()
-    x2 = float(input("Enter the starting Li content (x2): ").strip())
-    x1 = float(input("Enter the final Li content (x1): ").strip())
+    x2 = float(input("Enter the final Li content (x2): ").strip())
+    x1 = float(input("Enter the starting Li content (x1): ").strip())
 
     calculate_voltage_for_metal_anion(metal, anion, x2, x1)
