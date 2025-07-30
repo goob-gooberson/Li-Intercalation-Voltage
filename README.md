@@ -47,12 +47,48 @@ This requires three total energies:
 2. **MO2:** Delithiated cathode (Li removed)
 3. **Li:** Metallic lithium (reference)
 
-- **Charge Transfer:**  
-Li is typically fully ionized (Li⁺) upon intercalation, transferring its electron to the transition metal and the anion framework. The **anion charge transfer** strongly influences the intercalation voltage:
-- Oxides (O²⁻) generally have **higher voltages** than sulfides (S²⁻) or selenides (Se²⁻).
+- **Role of Anion Chemistry**
+
+The intercalation voltage depends strongly on the **anion (X)**:
+
+- Oxides (O²⁻) → Highest voltages (~3.7–4.2 V)
+- Sulfides (S²⁻) → Moderate voltages (~2.0 V)
+- Selenides (Se²⁻) → Lower voltages (~1.5 V)
+
+**Reason:** A significant fraction of the electron from Li⁺ is transferred to the anion. Oxygen, being more electronegative, stabilizes the additional charge better, resulting in a higher voltage.
 
 - **Structural Effects:**  
 While the metal chemistry and anion type largely determine the voltage, the **crystal structure** can influence ionic relaxation and band structure changes upon intercalation.
+
+- **Electronic Effects & Charge Transfer**
+
+- Li is fully ionized (Li⁺) upon intercalation.
+- Its electron is donated to:
+  - **Transition metal cations:** Reducing their oxidation state (e.g., Co³⁺ → Co²⁺)
+  - **Anion framework:** Oxygen gains partial negative charge  
+
+This charge transfer modifies the **band structure**:
+- Antibonding **eg\*** (metal d) bands shift downward
+- Bonding **eg_b** (oxygen p) bands shift upward
+- **t₂g bands** (nonbonding d) remain largely unaffected  
+
+As we go across the periodic table (Ti → Zn):
+- Metal d bands lower in energy  
+- M–O bond length decreases (until Co), increasing voltage 
+
+- **Trends and Key Findings**
+
+- **Anion effect is dominant:** Oxides > sulfides > selenides in voltage  
+- **Late transition metals (Co, Ni, Zn, Al)** give higher voltages  
+- Fully optimized geometries are essential: ignoring relaxation leads to significant errors  
+- Intercalation voltage trends can be predicted accurately using ab initio pseudopotential methods
+
+- **Upper Voltage Limit**
+
+- Oxygen-centered charge transfer leads to the highest voltages.
+- Predicted maximum intercalation voltage for **LiAlO₂:** ~4.7 V  
+- Hypothetical pure O₂-based solid could reach **~5.3 V**, but is not practically feasible.
+
 
 **Key Insight:**  
 Ab initio pseudopotential methods, combined with thermodynamics, enable prediction of average intercalation voltages **without experimental data**, allowing screening of new electrode materials for improved energy density.
