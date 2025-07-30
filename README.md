@@ -122,8 +122,16 @@ V (V) ≈ - ΔE (eV)
 
 V = - [ E(Li–Cathode) - E(Cathode) - E(Li) ]
 
----
+For lithium intercalation between MO₂ and LiMO₂:
 
+V ≈ - (E_LiMO2 - E_MO2 - E_Li) / F
+
+where:
+1. **E_LiMO2:** Total energy of the lithiated compound  
+2. **E_MO2:** Total energy of the delithiated compound  
+3. **E_Li:** Total energy per atom of metallic Li (reference)
+
+---
 
 ## Set up your Materials Project API key
 This project accepts your API key in **any one** of these ways:
