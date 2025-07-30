@@ -471,7 +471,7 @@ If you use this code in your research, please cite:
 ## This repository
 
 > **[VIPUL]**, *Voltage Calculation Tools using Materials Project API (PyMatGen)*,  
-> GitHub repository: [https://github.com/<goob-gooberson>/<Li-Intercalation_Voltage>](https://github.com/<goob-gooberson>/<Li-Intercalation-Voltage>)  
+> GitHub repository: [https://github.com/<goob-gooberson>/<Li-Intercalation_Voltage>](https://github.com/goob-gooberson/Li-Intercalation-Voltage)  
 
 This project builds on the pymatgen library. Please also cite:
 
