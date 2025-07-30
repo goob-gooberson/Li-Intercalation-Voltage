@@ -7,7 +7,7 @@ Python scripts and utilities for Li intercalation voltage estimation from DFT da
 - [Background theory](#background-theory)
 - [Formulae](#formulae)
 - [Implementation with PyMatGen](#implementation-with-pymatgen)
-- [Install](#install)
+- [Installation](#installation)
 - [Set up your Materials Project API key](#set-up-your-materials-project-api-key)
 - [Quick start](#quick-start)
 - [Examples](#examples)
@@ -234,6 +234,33 @@ Core functions
 - Fetches lowest-energy entries for: cathode, lithiated cathode, and anode.
 - Computes the Voltage
 - Reports the reaction string and estimated voltage
+
+---
+
+
+## Installation
+
+Follow these steps to set up the project and install dependencies.
+
+---
+
+### 1) Clone the repository
+```bash
+git clone https://github.com/<goob-gooberson>/<Li-Intercalation-Volatge>.git
+cd <Li-Intercalation-Volatge>
+```
+
+### 2) Install Dependencies
+
+Key packages:
+- pymatgen – for Materials Project API access and structure handling
+- python-dotenv – to support loading .env files automatically (optional)
+
+### 3) Set your Materials Project API Key
+
+You must provide your MP API key before running. See [Set up your Materials Project API key](#set-up-your-materials-project-api-key):
+
+### 4) Run the script
 
 ---
 
