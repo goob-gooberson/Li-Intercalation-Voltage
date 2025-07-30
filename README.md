@@ -309,8 +309,8 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 ### 1) Classic layered oxide (Co/O): from `x1 = 0` to `x2 = 1`
 - Enter the metal symbol (e.g., Co, Ni, Mn): Co
 - Enter the anion symbol (e.g., O, S, Se): O
-- Enter the starting Li content (x2): 1
-- Enter the final Li content (x1): 0
+- Enter the final Li content (x2): 1
+- Enter the starting Li content (x1): 0
 ---
 - CoO2 + 1.0Li -> LiCoO2
 - Estimated Voltage: 3.900 V
@@ -318,8 +318,8 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 ### 2) Half‑lithiated step (Co/O): from `x1 = 0` to `x2 = 0.5`
 - Enter the metal symbol (e.g., Co, Ni, Mn): Co
 - Enter the anion symbol (e.g., O, S, Se): O
-- Enter the starting Li content (x2): 0.5
-- Enter the final Li content (x1): 0
+- Enter the final Li content (x2): 0.5
+- Enter the starting Li content (x1): 0
 ---
 - CoO2 + 0.5Li -> Li0.5CoO2
 - Estimated Voltage: 3.650 V
@@ -327,8 +327,8 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 ### 3) Nickel oxide (Ni/O): from `x1 = 0.5` to `x2 = 1.0
 - Enter the metal symbol (e.g., Co, Ni, Mn): Ni
 - Enter the anion symbol (e.g., O, S, Se): O
-- Enter the starting Li content (x2): 1
-- Enter the final Li content (x1): 0.5
+- Enter the final Li content (x2): 1
+- Enter the starting Li content (x1): 0.5
 ---
 - Li0.5NiO2 + 0.5Li -> LiNiO2
 - Estimated Voltage: 3.700 V
@@ -336,8 +336,8 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 ### 4) Sulfide example (Mn/S): from `x1 = 0` to `x2 = 1`
 - Enter the metal symbol (e.g., Co, Ni, Mn): Mn
 - Enter the anion symbol (e.g., O, S, Se): S
-- Enter the starting Li content (x2): 1
-- Enter the final Li content (x1): 0
+- Enter the final Li content (x2): 1
+- Enter the starting Li content (x1): 0
 ---
 - MnS2 + 1.0Li -> LiMnS2
 - Estimated Voltage: 2.400 V
