@@ -66,7 +66,7 @@ This project accepts your API key in **any one** of these ways:
 2. For example, in PyCharm,
 3. Go to Run → Edit Configurations…
 4. Select your script (or add one).
-5. Under Environment variables, add: MP_API_KEY=your_api_key_here
+5. Under Environment variables, add: `MP_API_KEY=your_api_key_here`
 6. Click OK and run the script.
 
 
