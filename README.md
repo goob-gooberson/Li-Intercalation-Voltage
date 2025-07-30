@@ -69,6 +69,33 @@ This project accepts your API key in **any one** of these ways:
 5. Under Environment variables, add: `MP_API_KEY=your_api_key_here`
 6. Click OK and run the script.
 
+---
+
+### Option 3 — `.env` file (with `python-dotenv`)
+
+You can keep your Materials Project API key in a `.env` file. The project will read it automatically.
+
+1. **Copy the template**
+   - Find the file named `.env.example` in the project.
+   - Make a copy and rename it to **`.env`** (just `.env`, no extra name).
+2. **Add your API key**
+   - Open the new `.env` file.
+   - Replace `your_api_key_here` with your real Materials Project API key:
+     ```
+     MP_API_KEY=your_real_api_key
+     ```
+3. **Run the script**
+   - You don’t need to edit the code. When you run the script, it will automatically load the key from the `.env` file.
+
+---
+
+### Keep it private
+
+- **Do not commit your `.env` file** to the repository.  
+- It’s already listed in `.gitignore` so you can safely keep it local.
+
+---
+
 
 
 
