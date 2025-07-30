@@ -40,6 +40,8 @@ This project accepts your API key in **any one** of these ways:
    MP_API_KEY = "paste_your_materials_project_key_here"
 3. Do not commit this file. (Create through Codespaces if you're doing it on Website)
 
+---
+
 ### Option 2 — Environment variable `MP_API_KEY`
 
 #### A) GitHub Codespaces
@@ -86,8 +88,6 @@ You can keep your Materials Project API key in a `.env` file. The project will r
      ```
 3. **Run the script**
    - You don’t need to edit the code. When you run the script, it will automatically load the key from the `.env` file.
-
----
 
 ### Keep it private
 
