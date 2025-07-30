@@ -112,7 +112,7 @@ def calculate_voltage_for_metal_anion(metal, anion, x2, x1):
 
         else:
             results2 = get_entries(metal, anion, x2, tolerance=0.001)
-            print(results2)
+            
             energies = []
             for r in results2:
                 mpid_clean = r["mpid"].split("-")[0] + "-" + r["mpid"].split("-")[1]
@@ -125,7 +125,7 @@ def calculate_voltage_for_metal_anion(metal, anion, x2, x1):
                 energies.append(e)
 
             entry_x2 = max(energies)
-            print(energies)
+
 
         if x1 == 0:
             entry_x11 = get_lowest_entry_for_formula(mpr, li_x1_formula)
@@ -158,12 +158,11 @@ def calculate_voltage_for_metal_anion(metal, anion, x2, x1):
 
         e_x2 = entry_x2
         e_x1 = entry_x1
-        print(e_x2)
-        print(e_x1)
+
 
         delta_x = x2 - x1
         voltage = - (e_x2 - e_x1 - delta_x * li_bulk_energy) / delta_x
-        print((x2-x1) * li_bulk_energy)
+
         print(f"{li_x1_formula} + {(x2-x1)}Li -> {li_x2_formula}")
         print(f"Estimated Voltage: {voltage:.3f} V")
         return voltage
