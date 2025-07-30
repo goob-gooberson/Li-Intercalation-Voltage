@@ -312,8 +312,9 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 - Enter the starting Li content (x2): 1
 - Enter the final Li content (x1): 0
 
--- CoO2 + 1.0Li -> LiCoO2
--- Estimated Voltage: 3.900 V
+
+- CoO2 + 1.0Li -> LiCoO2
+- Estimated Voltage: 3.900 V
 
 ### 2) Half‑lithiated step (Co/O): from `x1 = 0` to `x2 = 0.5`
 - Enter the metal symbol (e.g., Co, Ni, Mn): Co
