@@ -275,21 +275,21 @@ You must provide your MP API key before running. See [Set up your Materials Proj
 ### 2) Graphite anode (lithiated anode → delithiated product)
 - Enter cathode formula: FePO4
 - Enter anode formula: LiC6
-
+---
 - Reaction: FePO4 + LiC6 → LiFePO4 + C6
 - Estimated Voltage: 3.410 V
 
 ### 3) Silicon anode (lithiated → delithiated)
 - Enter cathode formula: TiS2
 - Enter anode formula: LiSi
-
+---
 - Reaction: TiS2 + LiSi → LiTiS2 + Si
 - Estimated Voltage: 2.220 V
 
 ### 4) Another cathode example
 - Enter cathode formula: CoO2
 - Enter anode formula: Li
-
+---
 - Reaction: CoO2 + Li → LiCoO2
 - Estimated Voltage: 3.900 V
 
@@ -311,7 +311,7 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 - Enter the anion symbol (e.g., O, S, Se): O
 - Enter the starting Li content (x2): 1
 - Enter the final Li content (x1): 0
-
+---
 - CoO2 + 1.0Li -> LiCoO2
 - Estimated Voltage: 3.900 V
 
@@ -320,7 +320,7 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 - Enter the anion symbol (e.g., O, S, Se): O
 - Enter the starting Li content (x2): 0.5
 - Enter the final Li content (x1): 0
---
+---
 - CoO2 + 0.5Li -> Li0.5CoO2
 - Estimated Voltage: 3.650 V
 
@@ -329,7 +329,7 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 - Enter the anion symbol (e.g., O, S, Se): O
 - Enter the starting Li content (x2): 1
 - Enter the final Li content (x1): 0.5
-
+---
 - Li0.5NiO2 + 0.5Li -> LiNiO2
 - Estimated Voltage: 3.700 V
 
@@ -338,7 +338,7 @@ Li_x1 M X2 + (x2 − x1) Li → Li_x2 M X2
 - Enter the anion symbol (e.g., O, S, Se): S
 - Enter the starting Li content (x2): 1
 - Enter the final Li content (x1): 0
-
+---
 - MnS2 + 1.0Li -> LiMnS2
 - Estimated Voltage: 2.400 V
 
