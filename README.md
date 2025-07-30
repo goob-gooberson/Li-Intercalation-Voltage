@@ -237,6 +237,81 @@ Core functions
 
 ---
 
+## Assumptions & caveats
+
+The intercalation voltage calculations and ab initio predictions are subject to several key assumptions and limitations:
+
+---
+
+### **1. Thermodynamic Assumptions**
+
+- **ΔG ≈ ΔE:**  
+  Gibbs free energy change is approximated by the total internal energy difference from DFT:
+
+Entropy (**TΔS**) and pressure-volume (**PΔV**) contributions are neglected.  
+- Valid at **0 K** and can introduce small errors (~0.1–0.2 V) at room temperature.
+
+- **Average voltage only:**  
+Voltage is calculated for the **end-member compositions** (x = 0 and x = 1) and reported as an **average voltage**.  
+- Does not capture intermediate phase transitions or the full V(x) curve.
+
+---
+
+### **2. Structural Assumptions**
+
+- **Topotactic Li removal:**  
+It is assumed that removing Li from **LiMO₂** does not drastically change the host structure (MO₂).  
+- In reality, some materials undergo cation migration or structural collapse (e.g., LiNiO₂).
+
+- **Fully relaxed vs unrelaxed:**  
+The reported voltages are typically for **fully relaxed structures**.  
+- Neglecting relaxation can lead to differences of up to **0.5 V** (see hR4 vs tI16 structure in Table V).
+
+- **No configurational disorder:**  
+Disordered Li/vacancy arrangements are ignored; only fully lithiated and fully delithiated phases are considered.
+
+---
+
+### **3. Electronic & Chemical Assumptions**
+
+- **Full ionization of Li:**  
+Li is assumed to be completely ionized to Li⁺, donating its electron to the host lattice.
+
+- **Electron transfer distribution:**  
+Electron donation is considered to occur to both the transition metal and anion framework.  
+- Exact partitioning may vary with chemistry and is not directly measured.
+
+- **No rigid-band approximation:**  
+Nonrigid-band effects (changes in band structure upon intercalation) are important and included, but DFT may not capture all subtleties.
+
+---
+
+### **4. Reference and Methodological Limitations**
+
+- **Reference to metallic Li:**  
+The anode reference is **Li metal**, which simplifies voltage predictions.  
+- Practical anodes (e.g., LiC₆) would shift the absolute voltage slightly.
+
+- **DFT functional limitations:**  
+- Local Density Approximation (LDA) and Generalized Gradient Approximation (GGA) tend to **overbind metallic Li**, leading to underprediction of voltage by ~0.2 V.  
+- Correlation effects in transition metal d-electrons are not fully captured without advanced corrections (e.g., +U or hybrid functionals).
+
+- **Phase metastability:**  
+Calculations may consider hypothetical or metastable structures that have not been synthesized.
+
+---
+
+### **5. Scope and Predictive Use**
+
+- **Screening tool, not exact voltages:**  
+While trends are robust, absolute voltages can deviate from experiments by ~0.2–0.3 V.  
+
+- **Other properties not considered:**  
+- Li diffusion kinetics, electronic conductivity, and stability at high voltage are **not addressed**.  
+- High predicted voltage does not guarantee practical battery performance.
+
+---
+
 ## Troubleshooting
 
 1. “No entries found for …”
