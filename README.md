@@ -90,7 +90,8 @@ As we go across the periodic table (Ti → Zn):
 - Hypothetical pure O₂-based solid could reach **~5.3 V**, but is not practically feasible.
 
 
-**Key Insight:**  
+### **Key Insight:**  
+
 Ab initio pseudopotential methods, combined with thermodynamics, enable prediction of average intercalation voltages **without experimental data**, allowing screening of new electrode materials for improved energy density.
 
 ---
