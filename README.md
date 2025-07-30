@@ -47,7 +47,7 @@ This requires three total energies:
 2. **MO2:** Delithiated cathode (Li removed)
 3. **Li:** Metallic lithium (reference)
 
-- **Role of Anion Chemistry**
+### **Role of Anion Chemistry**
 
 The intercalation voltage depends strongly on the **anion (X)**:
 
@@ -60,7 +60,7 @@ The intercalation voltage depends strongly on the **anion (X)**:
 - **Structural Effects:**  
 While the metal chemistry and anion type largely determine the voltage, the **crystal structure** can influence ionic relaxation and band structure changes upon intercalation.
 
-- **Electronic Effects & Charge Transfer**
+### **Electronic Effects & Charge Transfer**
 
 - Li is fully ionized (Li⁺) upon intercalation.
 - Its electron is donated to:
@@ -76,14 +76,14 @@ As we go across the periodic table (Ti → Zn):
 - Metal d bands lower in energy  
 - M–O bond length decreases (until Co), increasing voltage 
 
-- **Trends and Key Findings**
+### **Trends and Key Findings**
 
 - **Anion effect is dominant:** Oxides > sulfides > selenides in voltage  
 - **Late transition metals (Co, Ni, Zn, Al)** give higher voltages  
 - Fully optimized geometries are essential: ignoring relaxation leads to significant errors  
 - Intercalation voltage trends can be predicted accurately using ab initio pseudopotential methods
 
-- **Upper Voltage Limit**
+### **Upper Voltage Limit**
 
 - Oxygen-centered charge transfer leads to the highest voltages.
 - Predicted maximum intercalation voltage for **LiAlO₂:** ~4.7 V  
