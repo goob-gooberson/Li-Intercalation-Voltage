@@ -1,5 +1,9 @@
+# secrets kept local
+local_settings.py
+.env
+
+# usual Python ignores
 __pycache__/
 *.pyc
-.env
 .venv/
 .ipynb_checkpoints/
