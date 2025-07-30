@@ -268,7 +268,7 @@ You must provide your MP API key before running. See [Set up your Materials Proj
 - Interactive run:
 - Enter cathode formula: FePO4
 - Enter anode formula: Li
---
+---
 - Reaction: FePO4 + Li → LiFePO4
 - Estimated Voltage: 3.420 V
 
