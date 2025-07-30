@@ -96,6 +96,7 @@ You can keep your Materials Project API key in a `.env` file. The project will r
 
 ---
 
+## Implementation with PyMatGen
 
 
 
