@@ -102,9 +102,9 @@ This script estimates an average intercalation voltage for a simple “cathode �
 What the script does:
 1. Loads your Materials Project API key robustly (local file → env var → .env), then creates an MPRester client.
 2. Fetches energies for three compositions:
-   the cathode host (e.g., FePO4)
-   the lithiated cathode (e.g., LiFePO4)
-   the anode (e.g., Li or a lithiated anode like LiC6)
+- the cathode host (e.g., FePO4)
+- the lithiated cathode (e.g., LiFePO4)
+- the anode (e.g., Li or a lithiated anode like LiC6)
 3. Forms a notional reaction and computes Voltage through the formula.
 4. Prints the reaction and the estimated voltage.
 
